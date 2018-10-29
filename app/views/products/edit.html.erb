@@ -1,2 +1,19 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+<div class="container">
+  <h2> Digite os dados do produto a ser editado: </h2>
+  <%= form_for(@product) do |f| %>
+    <div class="col-xs-3 col-sm-3">
+      <div class="row">
+        <div class="form-group">
+          <%= f.label :Descrição %>
+          <%= f.text_field :description, class: 'form-control' %>
+          <%= f.label :Quantidade %>
+          <%= f.text_field :quantity, class: 'form-control' %>
+          <%= f.label :Preço %>
+          <%= f.text_field :price, class: 'form-control' %>
+          <%= f.submit class: 'btn btn-primary',  value: 'Atualizar produto' %>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
