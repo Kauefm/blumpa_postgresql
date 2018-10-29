@@ -8,10 +8,12 @@ end
 gem "figaro"
 gem 'bootstrap-sass'
 gem 'simple_form'
-gem 'money-rails'
+gem 'money-rails', '~> 1.12'
 gem 'stripe'
 gem "letter_opener", group: :development
-
+gem 'money'
+gem 'pry-rails'
+gem 'pry-byebug'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'

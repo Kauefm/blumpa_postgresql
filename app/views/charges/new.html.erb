@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-sm-4">
+        <div class="card">
+          <%= form_tag new_product_charge_path do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+              <label class="amount">
+                <span>Amount: $5.00</span>
+              </label>
+            </article>
+
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="Obrigado por usar serviços da Blumpa"
+                    data-amount="500"
+                    data-locale="auto"></script>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,7 +9,7 @@
           <%= f.label :Quantidade %>
           <%= f.text_field :quantity, class: 'form-control' %>
           <%= f.label :Preço %>
-          <%= f.text_field number_with_delimiter(:price, delimiter: ".", separator: ","), class: 'form-control' %>
+          <%= f.text_field :price, class: 'form-control' %>
           <%= f.submit class: 'btn btn-primary',  value: 'Criar produto' %>
           <p></p>
         </div>

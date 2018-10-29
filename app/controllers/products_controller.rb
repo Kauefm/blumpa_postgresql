@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  helper_method :number_to_currency_br
+
 
   def new
-      @product = Product.new
+    @product = Product.new
   end
 
   def index
@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-      if Client.nil?
+      if Client.last.nil?
         client = Client.new(name:"Kauê" , email:"kauefm@gmail.com")
       else
         client = Client.last
